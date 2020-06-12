@@ -38,7 +38,7 @@ public class DeliveryCardTest {
     void shouldSubmitRequestWithDropDownList() {
         open("http://localhost:9999");
         $("[placeholder='Город']").setValue("Мос");
-        $$(".menu-item").first().click();
+        $$(".menu-item").find(exactText("Москва")).click();
         $("[placeholder='Дата встречи']").click();
         $(".calendar__day_state_current").click();
         $("[name=name]").setValue("Имя Фамилия");
